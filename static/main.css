@@ -1,0 +1,16 @@
+div {
+    border-style: dotted;
+    border-width: 1px;
+}
+
+.sign-in {
+    padding-top: 10px;
+}
+.nav {
+    padding-top:5px;
+    padding-bottom:15px;
+}
+
+.post-thumbnail {
+  padding-bottom: 25px;
+}
