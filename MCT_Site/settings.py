@@ -25,7 +25,9 @@ SECRET_KEY = 'h9%o2vn1dw7ubmfotksx4frezc!-(+-3=!-8b#w+k&ov7nx1c='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'npchampion.pythonanywhere.com',
+]
 
 
 # Application definition
