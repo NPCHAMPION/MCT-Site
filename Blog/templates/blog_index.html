@@ -16,11 +16,6 @@
   </div>
   <div class="col-sm-8">
     <div class="col-sm-12">
-    {% if allow_add_post %}
-      <form action="{% url 'new_post'%}">
-        <input class="btn btn-info" type="submit" value="New Post">
-      </form>
-    {% endif %}
     </div>
     {% for post in posts %}
     <div class="col-sm-12">
