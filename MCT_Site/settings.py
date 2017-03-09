@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'npchampion.pythonanywhere.com',
     'python35-mct-site.44fs.preview.openshiftapps.com',
+    'localhost',
+    '127.0.0.1',
 ]
 
 
