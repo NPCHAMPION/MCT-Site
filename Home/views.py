@@ -13,3 +13,9 @@ def index(request):
 
 def contact(request):
     return render(request, '')
+
+def login(request):
+    context = Context({
+
+    })
+    return render(request, 'login.html', context)

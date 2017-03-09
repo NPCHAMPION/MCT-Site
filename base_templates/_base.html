@@ -14,10 +14,9 @@
 
 <body>
   <div class="col-sm-10 col-sm-offset-1">
-    {% block nav %}
       <div class="row">
         <div class="col-md-4 text-center">
-          <ul class="nav nav-tabs nav-justified">
+          <ul class="nav nav-pills">
               <li><a href="/">Home</a></li>
               <li><a href="/blog/">Blog</a></li>
               <li><a href="/pdf/">PDF</a></li>
@@ -26,20 +25,71 @@
         </div>
         <div class="col-md-5">
         </div>
-        <div class="sign-in col-md-3 text-center">
-          <form action="#">
-            <input class="btn btn-default" type="submit" value="Sign in">
-          </form>
+        <div class="col-md-3 text-center">
+            <ul class="nav nav-pills">
+              <li><a href="#0" id="signin-button">Sign in</a></li>
+              <li><a href="#0" id="signup-button">Sign up</a></li>
+            </ul>
         </div>
       </div>
-
-    {% endblock %}
-
-    {% block top-banner %}
-    {% endblock %}
-
-    {% block content %}{% endblock %}
+  <div class="login-modal" id='signin-modal'>
+    <div class="login-modal-content col-sm-4 col-sm-offset-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <span id="close-signin" class="close">&times;</span>
+            <h1 class="panel-title text-center">Login</h1>
+          </div>
+          <div class="panel-body">
+              <div class="col-sm-8 col-sm-offset-2">
+                <form>
+                  <div class="form-group text-center">
+                    <input type="text" class="form-control text-center" placeholder="Username">
+                  </div>
+                  <div class="form-group text-center">
+                    <input type="password" class="form-control text-center" placeholder="Password">
+                  </div>
+                  <div class="col-sm-8 col-sm-offset-2">
+                      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                  </div>
+                </form>
+              </div>
+          </div> <!-- end panel-body -->
+          <div class="panel-footer">
+          </div>
+        </div>
+        <p class="text-center"><a href="#0" class="login-bottom-message signup-button">Create new account</a></p>
+    </div>
   </div>
+  <div class="login-modal" id='signup-modal'>
+    <div class="login-modal-content col-sm-4 col-sm-offset-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <span id="close-signup" class="close">&times;</span>
+            <h1 class="panel-title text-center">New account</h1>
+          </div>
+          <div class="panel-body">
+              <div class="col-sm-8 col-sm-offset-2">
+                <form>
+                  <div class="form-group text-center">
+                    <input type="text" class="form-control text-center" placeholder="Username">
+                  </div>
+                  <div class="form-group text-center">
+                    <input type="password" class="form-control text-center" placeholder="Password">
+                  </div>
+                  <div class="col-sm-8 col-sm-offset-2">
+                      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                  </div>
+                </form>
+              </div>
+          </div> <!-- end panel-body -->
+          <div class="panel-footer">
+          </div>
+        </div>
+    </div>
+  </div>
+
+  {% block content %}{% endblock %}
+</div>
 </body>
 
   <!-- Bootstrap core JavaScript
@@ -47,5 +97,5 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- <script src="{% static 'main.js' %}"></script> -->
+  <script src="{% static 'main.js' %}"></script>
 </html>

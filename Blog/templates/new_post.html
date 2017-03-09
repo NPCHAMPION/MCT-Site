@@ -2,15 +2,13 @@
 
 {% block title %}{{ title }}{% endblock %}
 
-{% block top-banner %}
+{% block content %}
+{% load bootstrap_tags %}
+
 <div class="container-fluid text-center">
   <h1>New Post</h1>
   <h4>Fill out below fields to add a post.</h4>
 </div>
-{% endblock %}
-
-{% block content %}
-{% load bootstrap_tags %}
 <div class="col-sm-8 col-sm-offset-2">
     <form id="post_form" method="post" action="{% url 'new_post' %}" enctype="multipart/form-data">
             {% csrf_token %}
